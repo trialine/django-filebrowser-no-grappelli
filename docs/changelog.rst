@@ -8,6 +8,11 @@
 Changelog
 =========
 
+3.7.5 (September 12th, 2018)
+------------------------
+
+* Support for Django 2.1 (by @orbitvu)
+
 3.7.4 (January 27th, 2018)
 ------------------------
 
