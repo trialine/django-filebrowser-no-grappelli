@@ -361,6 +361,7 @@ class VersionObjectTemplateTagTests(TestCase):
     def setUp(self):
         super(VersionObjectTemplateTagTests, self).setUp()
         shutil.copy(self.STATIC_IMG_PATH, self.FOLDER_PATH)
+        shutil.copy(self.STATIC_IMG_BAD_PATH, self.FOLDER_PATH)
 
         os.makedirs(self.PLACEHOLDER_PATH)
         shutil.copy(self.STATIC_IMG_PATH, self.PLACEHOLDER_PATH)
@@ -407,6 +408,13 @@ class VersionObjectTemplateTagTests(TestCase):
         r = t.render(c)
         self.assertEqual(c["version_large"].url, os.path.join(settings.MEDIA_URL, ""))
         self.assertEqual(r, os.path.join(settings.MEDIA_URL, ""))
+
+    def test_jpg_not_an_image(self):
+        t = Template('{% load fb_versions %}{% version obj "large" as version_large %}{{ version_large.url }}')
+        c = Context({"obj": self.F_IMAGE_BAD})
+        r = t.render(c)
+        self.assertEqual(c["version_large"], "")
+        self.assertEqual(r, "")
 
     @patch('filebrowser.templatetags.fb_versions.SHOW_PLACEHOLDER', True)
     @patch('filebrowser.templatetags.fb_versions.FORCE_PLACEHOLDER', True)
