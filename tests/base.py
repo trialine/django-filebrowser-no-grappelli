@@ -40,8 +40,10 @@ class FilebrowserTestCase(TestCase):
 
         self.STATIC_IMG_PATH = os.path.join(settings.BASE_DIR, 'filebrowser', "static", "filebrowser", "img", "testimage.jpg")
         self.STATIC_IMG_BAD_NAME_PATH = os.path.join(settings.BASE_DIR, 'filebrowser', "static", "filebrowser", "img", "TEST_IMAGE_000.jpg")
+        self.STATIC_IMG_BAD_PATH = os.path.join(settings.BASE_DIR, 'filebrowser', "static", "filebrowser", "img", "test_not_an_image.jpg")
 
         self.F_IMAGE = FileObject(os.path.join(DIRECTORY, 'folder', "testimage.jpg"), site=site)
+        self.F_IMAGE_BAD = FileObject(os.path.join(DIRECTORY, 'folder', "test_not_an_image.jpg"), site=site)
         self.F_MISSING = FileObject(os.path.join(DIRECTORY, 'folder', "missing.jpg"), site=site)
         self.F_FOLDER = FileObject(os.path.join(DIRECTORY, 'folder'), site=site)
         self.F_SUBFOLDER = FileObject(os.path.join(DIRECTORY, 'folder', 'subfolder'), site=site)

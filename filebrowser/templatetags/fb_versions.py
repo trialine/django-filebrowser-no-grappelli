@@ -45,7 +45,7 @@ class VersionNode(Node):
             else:
                 return version.url
         except Exception:
-            if settings.TEMPLATE_DEBUG:
+            if context.template.engine.debug:
                 raise
             if self.var_name:
                 context[self.var_name] = ""
