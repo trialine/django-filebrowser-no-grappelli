@@ -1,7 +1,7 @@
 # coding: utf-8
 import os
 
-from six import string_types
+from django.utils.six import string_types
 
 from django import forms
 try:
