@@ -1,6 +1,8 @@
 # coding: utf-8
 import os
 
+from six import string_types
+
 from django import forms
 try:
     from django.urls import reverse
@@ -111,7 +113,7 @@ class FileBrowseField(CharField):
         return self.to_python(value)
 
     def get_prep_value(self, value):
-        if not value:
+        if not value or isinstance(value, string_types):
             return value
         return value.path
 
@@ -248,8 +250,8 @@ class FileBrowseUploadField(CharField):
             return value
         return FileObject(value, site=self.site)
 
-    def get_db_prep_value(self, value, connection, prepared=False):
-        if not value:
+    def get_prep_value(self, value):
+        if not value or isinstance(value, string_types):
             return value
         return value.path
 
