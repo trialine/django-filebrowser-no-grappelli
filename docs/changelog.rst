@@ -8,6 +8,11 @@
 Changelog
 =========
 
+3.7.6 (February 1st, 2019)
+------------------------
+
+* Fix default value for FileBrowserField (thanks @carlosgeos for report)
+
 3.7.5 (September 12th, 2018)
 ------------------------
 
