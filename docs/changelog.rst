@@ -8,6 +8,11 @@
 Changelog
 =========
 
+3.7.7 (February 2nd, 2019)
+------------------------
+
+* Fix of the previous release removing dependency on six
+
 3.7.6 (February 1st, 2019)
 ------------------------
 
