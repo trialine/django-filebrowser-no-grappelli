@@ -6,3 +6,4 @@ recursive-include filebrowser/static *
 recursive-include filebrowser/templates *
 recursive-include filebrowser/locale *
 recursive-include filebrowser/management *
+recursive-include tests *
