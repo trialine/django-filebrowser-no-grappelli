@@ -8,6 +8,11 @@
 Changelog
 =========
 
+3.7.8 (Match 25th, 2019)
+------------------------
+
+* Fix Chinese locale language code to match the one in Django 1.9+
+
 3.7.7 (February 2nd, 2019)
 ------------------------
 
