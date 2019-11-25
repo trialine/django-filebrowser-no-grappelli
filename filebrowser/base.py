@@ -228,6 +228,9 @@ class FileObject():
     def __str__(self):
         return force_text(self.path)
 
+    def __fspath__(self):
+        return self.__str__()
+
     @property
     def name(self):
         return self.path
