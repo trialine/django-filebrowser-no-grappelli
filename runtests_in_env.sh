@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DJANGO_VERSIONS=("1.8" "1.9" "1.10" "1.11" "2.0", "2.1")
+DJANGO_VERSIONS=("1.8" "1.9" "1.10" "1.11" "2.0" "2.1" "2.2")
 VIRTUALENV_DIR="envs"
 BASEDIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
 
