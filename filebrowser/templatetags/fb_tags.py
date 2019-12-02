@@ -1,8 +1,6 @@
 # coding: utf-8
 
-from django import VERSION as DJANGO_VERSION
 from django import template
-from django.contrib.admin.templatetags.admin_static import static
 from django.template import TemplateSyntaxError
 from django.utils.http import urlquote
 from django.utils.safestring import mark_safe
