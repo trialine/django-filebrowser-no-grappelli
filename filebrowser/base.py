@@ -8,9 +8,9 @@ import tempfile
 import time
 
 from django.core.files import File
-from django.utils.encoding import python_2_unicode_compatible, force_text
-from django.utils.six import string_types
+from django.utils.encoding import force_text
 from django.utils.functional import cached_property
+from six import python_2_unicode_compatible, string_types
 
 from filebrowser.settings import EXTENSIONS, VERSIONS, ADMIN_VERSIONS, VERSIONS_BASEDIR, VERSION_QUALITY, STRICT_PIL, IMAGE_MAXBLOCK, DEFAULT_PERMISSIONS
 from filebrowser.utils import path_strip, process_image

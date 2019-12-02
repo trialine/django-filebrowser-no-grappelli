@@ -8,10 +8,7 @@ try:
     from django.urls import reverse
 except ImportError:
     from django.core.urlresolvers import reverse
-try:
-    from django.utils.six.moves.urllib.parse import urlencode
-except ImportError:
-    from django.utils.http import urlencode
+from django.utils.http import urlencode
 from mock import patch
 
 from filebrowser.settings import VERSIONS, DEFAULT_PERMISSIONS

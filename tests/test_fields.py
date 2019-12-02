@@ -2,7 +2,7 @@
 
 from tests import FilebrowserTestCase as TestCase
 
-from django.utils.six import string_types
+from six import string_types
 
 from filebrowser.base import FileObject
 from filebrowser.fields import FileBrowseField
