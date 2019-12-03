@@ -8,6 +8,11 @@
 Changelog
 =========
 
+3.7.9 (Novermber 3rd, 2019)
+------------------------
+
+* FileObject should implement os.PathLike protocol
+
 3.7.8 (Match 25th, 2019)
 ------------------------
 
