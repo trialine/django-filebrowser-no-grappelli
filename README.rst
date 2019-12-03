@@ -29,7 +29,7 @@ FileBrowser 3.7 requires
 * Pillow (https://github.com/python-imaging/Pillow)
 
 No Grappelli
------------
+------------
 
 This fork removes the dependency on Grappelli.
 
