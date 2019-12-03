@@ -108,7 +108,7 @@ class FileBrowseField(CharField):
             return value
         return FileObject(value, site=self.site)
 
-    def from_db_value(self, value, expression, connection, context):
+    def from_db_value(self, value, *args, **kwargs):
         return self.to_python(value)
 
     def get_prep_value(self, value):
@@ -241,7 +241,7 @@ class FileBrowseUploadField(CharField):
         self.temp_upload_dir = kwargs.pop('temp_upload_dir', '')
         return super(FileBrowseUploadField, self).__init__(*args, **kwargs)
 
-    def from_db_value(self, value, expression, connection, context):
+    def from_db_value(self, value, *args, **kwargs):
         return self.to_python(value)
 
     def to_python(self, value):
