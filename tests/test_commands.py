@@ -6,7 +6,7 @@ import shutil
 
 from django.conf import settings
 from django.core.management import call_command
-from django.utils.six import StringIO
+from six import StringIO
 
 from filebrowser.settings import DIRECTORY
 from tests.base import FilebrowserTestCase as TestCase

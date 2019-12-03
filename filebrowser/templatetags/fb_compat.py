@@ -2,7 +2,7 @@
 
 from django import VERSION as DJANGO_VERSION
 from django import template
-from django.contrib.admin.templatetags.admin_static import static
+from django.templatetags.static import static
 
 
 register = template.Library()

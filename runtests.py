@@ -11,9 +11,6 @@ if __name__ == "__main__":
         django.setup()
 
     from django.conf import settings
-    # WTF??? Otherwise it doesn't work with Django 1.4
-    settings.DATABASES
-
     from django.test.utils import get_runner
 
     TestRunner = get_runner(settings)

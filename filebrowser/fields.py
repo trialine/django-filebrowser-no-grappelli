@@ -1,8 +1,6 @@
 # coding: utf-8
 import os
 
-from django.utils.six import string_types
-
 from django import forms
 try:
     from django.urls import reverse
@@ -11,9 +9,10 @@ except ImportError:
 from django.db.models.fields import CharField
 from django.forms.widgets import Input
 from django.template.loader import render_to_string
+from django.templatetags.static import static
 from django.utils.translation import ugettext_lazy as _
-from django.contrib.admin.templatetags.admin_static import static
 from django.contrib.admin.options import FORMFIELD_FOR_DBFIELD_DEFAULTS
+from six import string_types
 
 from filebrowser.base import FileObject
 from filebrowser.settings import ADMIN_THUMBNAIL, EXTENSIONS, UPLOAD_TEMPDIR
