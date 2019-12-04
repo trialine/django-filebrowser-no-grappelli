@@ -8,7 +8,7 @@ def read(fname):
 
 setup(
     name='django-filebrowser-no-grappelli',
-    version='3.7.9',
+    version='3.8.0',
     description='Media-Management no Grappelli',
     long_description=read('README.rst'),
     url='https://github.com/smacker/django-filebrowser-no-grappelli',
